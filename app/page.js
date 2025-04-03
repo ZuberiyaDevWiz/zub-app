@@ -376,12 +376,14 @@ export default function MyLove() {
 
         {/* Display an image after the "Haaye" button disappears */}
         {showImage && (
-        <div className="mt-8 animate-pulse w-screen h-screen">
+        <div className="mt-8 animate-pulse ">
         <Image
           src="/fav.png"
           alt="Your image"
-          layout="fill" // Ensures the image fills the container
-          objectFit="cover" // Ensures the image covers the screen properly
+          height={5000}
+          width={2000}
+          // Ensures the image fills the container
+         // Ensures the image covers the screen properly
           className="rounded-xl"
         />
       </div>
