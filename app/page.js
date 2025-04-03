@@ -33,10 +33,10 @@ export default function MyLove() {
 
   const messages = [
     "AMI TOMAAKE BHALO BASHI MY CUTIE😍😍", // Bengali
-    "ನಾನು ನಿನ್ನನ್ನು ಪ್ರೀತಿಸುತ್ತೇನೆ ಗುರು❤️💕", // Kannada
+    "ನಾನು ನಿನ್ನನ್ನು ಪ್ರೀತಿಸುತ್ತೇನೆ ಗುರು❤️", // Kannada
     "నేను నిన్ను ప్రేమిస్తున్నాను😘😘", // Telugu
     "MAIN TUMSE BOHOTH PYAAR KARTI HOON IDIOT😊😊", // Hindi
-    "I LOVE U BABBESSSS💖", // English
+    "I LOVE U BABBESSSS🤗🤗", // English
   ]; // The messages in different languages
 
   const handleClick = () => {
@@ -242,13 +242,13 @@ export default function MyLove() {
   }, [showHaayeButton]);
 
   return (
-    <main className="w-full h-screen flex items-center justify-center bg-black text-white relative">
+    <main className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-red-500 via-pink-500 to-red-500 text-white relative">
       <div className="text-center text-white z-10">
         {/* Button to start the sequence */}
         {showButton && (
           <button
             onClick={handleClick}
-            className="bg-white text-pink-600 py-2 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-pink-100 transition duration-300"
+            className="bg-white text-pink-600 py-2 px-6 rounded-lg  font-semibold shadow-md hover:bg-pink-100 transition duration-300"
           >
             Click Me ❤️
           </button>
@@ -256,7 +256,7 @@ export default function MyLove() {
 
         {/* Show the typing effect message */}
         {showMessage && !allMessagesTyped && (
-          <div className="mt-8 text-3xl sm:text-4xl md:text-6xl font-bold">
+          <div className="mt-8 text-3xl sm:text-2xl md:text-6xl font-bold">
             {typewriterText}
           </div>
         )}
@@ -273,7 +273,7 @@ export default function MyLove() {
           <button
             disabled={countdown > 0} // Disable button while countdown is active
             onClick={handleNewButtonClick}
-            className="bg-white text-pink-600 py-2 animate-bounce px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-pink-100 transition duration-300 mt-8"
+            className="bg-white text-pink-600 py-2 animate-bounce px-6 rounded-lg  font-semibold shadow-md hover:bg-pink-100 transition duration-300 mt-8"
           >
             {countdown >= 0 ? `Angandre Let's dive in😉 in ${countdown}s ...` : "Angandre wait maadu..."}
           </button>
@@ -290,7 +290,7 @@ export default function MyLove() {
         {showNewButton && (
           <button
             onClick={handleFinalTextClick}
-            className="bg-white text-pink-600 py-2 px-6  animate-pulse rounded-lg text-lg font-semibold shadow-md hover:bg-pink-100 transition duration-300 mt-8"
+            className="bg-white text-pink-600 py-2 px-6 animate-pulse rounded-lg  font-semibold shadow-md hover:bg-pink-100 transition duration-300 mt-8"
           >
             sari sari, innu jaasti kaadsalla bidu..😒 click maadu⬇️
           </button>
@@ -332,13 +332,13 @@ export default function MyLove() {
           <div className="mt-8 animate-bounce">
             <button
               onClick={handleYesClick}
-              className="bg-green-600 py-2 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-green-500 transition duration-300 mr-4"
+              className="bg-green-600 py-2 px-6 rounded-lg  font-semibold shadow-md hover:bg-green-500 transition duration-300 mr-4"
             >
               Haan Heltini..😃
             </button>
             <button
               onClick={handleNoClick}
-              className="bg-red-600 py-2 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-red-500 transition duration-300"
+              className="bg-red-600 py-2 px-6 rounded-lg  font-semibold shadow-md hover:bg-red-500 transition duration-300"
             >
               illa Hellala..😠
             </button>
@@ -357,7 +357,7 @@ export default function MyLove() {
             <input
               type="text"
               placeholder="waiting..."
-              className="py-2 px-6 rounded-lg text-lg text-white outline-amber-200 outline"
+              className="py-2 px-6 rounded-lg  text-white outline-amber-200 outline"
               value={inputValue}
               onChange={handleInputChange} // Track user input
             />
@@ -367,8 +367,7 @@ export default function MyLove() {
         {/* Show the Haaye button after input is "I LOVE YOU ZUBERIYA" */}
         {showHaayeButton && (
           <button
-         
-            className="bg-white py-2 px-6 rounded-lg text-lg text-black font-semibold shadow-md hover:bg-pink-100 transition duration-300 mt-8"
+            className="bg-white py-2 px-6 rounded-lg  text-black font-semibold shadow-md hover:bg-pink-100 transition duration-300 mt-8"
           >
             Haaye 😍
             <span className="animate-pulse">💘</span>
@@ -378,13 +377,13 @@ export default function MyLove() {
         {/* Display an image after the "Haaye" button disappears */}
         {showImage && (
           <div className="mt-8 animate-pulse">
-           <Image
-  src="/fav.png"
-  alt="Your image"
-  width={500}
-  height={500}
-  className="rounded-xl"
-/>
+            <Image
+              src="/fav.png"
+              alt="Your image"
+              width={2000}
+              height={2000}
+              className="rounded-xl"
+            />
           </div>
         )}
 
@@ -395,7 +394,7 @@ export default function MyLove() {
         </audio>
 
         {/* Background music */}
-        <audio ref={backgroundAudioRef} >
+        <audio ref={backgroundAudioRef}>
           <source src="/mehbooba.mp3" type="audio/mp3" />
           Your browser does not support the audio element.
         </audio>
