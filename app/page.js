@@ -87,7 +87,7 @@ export default function MyLove() {
       setTypewriterText("");
       startTypingEffect();
     }
-  }, [currentLanguageIndex,allMessagesTyped,startTypingEffect]);
+  }, [currentLanguageIndex,allMessagesTyped]);
 
   useEffect(() => {
     if (showCanUText) {
