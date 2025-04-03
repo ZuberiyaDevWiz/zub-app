@@ -242,7 +242,7 @@ export default function MyLove() {
   }, [showHaayeButton]);
 
   return (
-    <main className="w-full h-screen flex items-center justify-center bg-gradient-to-r  via-pink-600 to-red-500 text-white relative">
+    <main className="w-full h-screen flex items-center justify-center bg-gradient-to-r  from-red-600 to-pink-600 text-white relative">
       <div className="text-center text-white z-10">
         {/* Button to start the sequence */}
         {showButton && (
@@ -376,7 +376,7 @@ export default function MyLove() {
 
         {/* Display an image after the "Haaye" button disappears */}
         {showImage && (
-        <div className="mt-8 animate-pulse w-full h-full">
+        <div className="mt-8 animate-pulse w-screen h-screen">
         <Image
           src="/fav.png"
           alt="Your image"
