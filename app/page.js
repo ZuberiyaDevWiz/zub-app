@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 export default function MyLove() {
   const [showMessage, setShowMessage] = useState(false);
@@ -86,7 +87,7 @@ export default function MyLove() {
       setTypewriterText("");
       startTypingEffect();
     }
-  }, [currentLanguageIndex]);
+  }, [currentLanguageIndex,allMessagesTyped]);
 
   useEffect(() => {
     if (showCanUText) {
@@ -377,7 +378,13 @@ export default function MyLove() {
         {/* Display an image after the "Haaye" button disappears */}
         {showImage && (
           <div className="mt-8 animate-pulse">
-            <img src="/fav.png" alt="Love Image" className="w-screen h-screen mx-auto" />
+           <Image
+  src="/fav.png"
+  alt="Your image"
+  width={500}
+  height={500}
+  className="rounded-xl"
+/>
           </div>
         )}
 
