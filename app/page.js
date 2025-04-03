@@ -87,7 +87,7 @@ export default function MyLove() {
       setTypewriterText("");
       startTypingEffect();
     }
-  }, [currentLanguageIndex,allMessagesTyped]);
+  }, [currentLanguageIndex,allMessagesTyped,startTypingEffect]);
 
   useEffect(() => {
     if (showCanUText) {
@@ -348,7 +348,7 @@ export default function MyLove() {
         {/* Show new message after "Haan Heltini" button is clicked */}
         {showNewMessage && (
           <div className="mt-8 text-3xl sm:text-4xl animate-pulse md:text-6xl font-bold">
-            Yaayyyy..!😃 En nodtidiya.,"I LOVE YOU ZUBERIYA" helu matte.!!!
+            Yaayyyy..!😃 En nodtidiya.,&quot;I LOVE YOU ZUBERIYA&quot; helu matte.!!!
           </div>
         )}
 
