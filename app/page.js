@@ -242,7 +242,7 @@ export default function MyLove() {
   }, [showHaayeButton]);
 
   return (
-    <main className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white relative">
+    <main className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-purple-200 via-pink-300 to-red-200 text-white relative">
       <div className="text-center text-white z-10">
         {/* Button to start the sequence */}
         {showButton && (
@@ -376,14 +376,16 @@ export default function MyLove() {
 
         {/* Display an image after the "Haaye" button disappears */}
         {showImage && (
-          <div className="mt-8 animate-pulse w-screen h-screen">
-            <Image
-              src="/fav.png"
-              alt="Your image"
-             fill
-              className="rounded-xl"
-            />
-          </div>
+        <div className="mt-8 animate-pulse w-full h-full">
+        <Image
+          src="/fav.png"
+          alt="Your image"
+          layout="fill" // Ensures the image fills the container
+          objectFit="cover" // Ensures the image covers the screen properly
+          className="rounded-xl"
+        />
+      </div>
+      
         )}
 
         {/* Hidden audio elements */}
