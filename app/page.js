@@ -242,7 +242,7 @@ export default function MyLove() {
   }, [showHaayeButton]);
 
   return (
-    <main className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-red-500 via-pink-500 to-red-500 text-white relative">
+    <main className="w-full h-screen flex items-center justify-center bg-gradient-to-r from-pink-500 via-red-500 to-red-500 text-white relative">
       <div className="text-center text-white z-10">
         {/* Button to start the sequence */}
         {showButton && (
